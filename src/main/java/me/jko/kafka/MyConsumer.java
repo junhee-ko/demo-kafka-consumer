@@ -8,14 +8,14 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class Consumer {
+public class MyConsumer {
 
-  private static final String TOPIC = "jko-topic";
+  private static final String TOPIC = "this-is-test";
 
-  @KafkaListener(id = "container-id", topics = TOPIC, containerFactory = "kafkaListenerContainerFactory")
+  @KafkaListener(topics = TOPIC)
   public void consume(String data, Acknowledgment acknowledgment) {
     log.info("Consumed Data : {}", data);
-
     acknowledgment.acknowledge();
   }
 }
+

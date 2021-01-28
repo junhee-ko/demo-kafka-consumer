@@ -1,0 +1,10 @@
+#spring:
+#  kafka:
+#    listener:
+#      concurrency: 1
+#      ack-mode: manual
+#    bootstrap-servers: localhost:9091
+#    consumer:
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      group-id: collect-mydata-insurance
